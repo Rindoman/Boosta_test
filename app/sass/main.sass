@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,900')
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One')
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900')
+
+=Roboto
+    font-family: 'Roboto', sans-serif
+
+=Hammersmith
+    font-family: 'Hammersmith One', sans-serif
+
+=Playfair
+    font-family: 'Playfair Display', serif
+
+
+$main-color: #00e0d0
+$font-main: #2f2d35
+$font-white: #ffffff
+
+
+*
+    margin: 0px
+    padding: 0px
+    box-sizing: border-box
+    scroll-behavior: smooth
+    outline: none
+
+a
+    text-decoration: none
+    color: $font-white
+
+*,
+*:before,
+*:after 
+    box-sizing: inherit
+    padding: 0
+    margin: 0
+
+
+
+.btn
+    height: 40px
+    width: 120px
+    border: 2px solid $main-color
+    border-radius: 3px
+    background-color: transparent
+    +Hammersmith
+    font-size: 16px
+    color: $main-color
+    cursor: pointer
+    transition:	0.2s ease-in-out
+    &:hover
+        background-color: $main-color
+        color: $font-white
+
+.header
+    margin: 0 auto
+    height: 670px
+    width: 1600px
+    background-image: url(../img/header_bcg.jpg)
+    &__bcg
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: linear-gradient(270deg, rgba(49,29,94,0.85) 0%, rgba(9,5,47,0.85) 100%)
+        height: 670px
+        width: 100%
+        &--navigation
+            width: 940px
+            padding-top: 35px
+            display: flex
+            justify-content: space-between
+        &--title
+            padding-top: 120px
+            +Playfair
+            font-weight: 900
+            font-size: 32px
+            color: $font-white
+        &--text
+            padding: 28px 0 48px 0
+            text-align: center
+            +Roboto
+            font-weight: 300
+            color: $font-white
+            font-size: 14px
+            line-height: 160%
+            letter-spacing: 1px
+        &--separator
+            padding-top: 9px
+            width: 50px
+            border-bottom: 1px solid $main-color
+        &--dot-nav
+            display: flex
+            justify-content: space-between
+            padding-top: 125px
+            & .option-input
+                appearance: none
+                height: 10px
+                width: 10px
+                transition: all 0.15s ease-out 0s
+                background: #cbd1d8
+                border: none
+                color: #fff
+                cursor: pointer
+                display: inline-block
+                margin-right: 0.5rem
+                outline: none
+                position: relative
+                z-index: 1000
+                &:hover
+                    background: #9faab7
+                &:checked
+                    background: #40e0d0
+                    &::before
+                        height: 10px
+                        width: 10px
+                        position: absolute
+                        content: ''
+                        display: inline-block
+                        text-align: center
+                    &::after
+                        animation: click-wave 0.65s
+                        background: #40e0d0
+                        content: ''
+                        display: block
+                        position: relative
+                        z-index: 100
+                &.radio
+                    border-radius: 50%
+                    &::after
+                        border-radius: 50%
+            & label
+                display: block
+
+    .nav
+        &__ul
+            width: 525px
+            display: flex
+            justify-content: space-between
+            &--li
+                list-style: none
+                & a
+                    +Roboto
+                    font-size: 13px
+                    font-weight: 900
+                    transition:	0.2s ease-in-out
+                    &:hover
+                        color: $main-color
+.logo
+    display: flex
+    justify-content: space-between
+    width: 130px
+    &__title
+        +Roboto
+        font-weight: 100
+        font-size: 30px
+        background: linear-gradient(45deg, $main-color, #4aa3cc)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+#top
+    margin-left: -50px
+    top: 100px
+    display: flex
+
+#badge-ribbon
+    position: relative
+    height: 250px
+    width: 180px
+    &:before
+        content: ''
+        position: absolute
+        border-bottom: 250px solid #13102d
+        border-left: 190px solid transparent
+        clip-path: polygon(100% 0%, 35% 75%, 75% 75%)
+    &:after
+        content: ''
+        position: absolute
+        border-bottom: 250px solid #52c3c0
+        border-right: 190px solid transparent
+        clip-path: polygon(0% 0%, 20% 75%, 65% 75%)
+        right: -200px
+
+#badge-ribbon_2
+    position: relative
+    margin-left: -85px
+    height: 250px
+    width: 180px
+    &:before
+        content: ''
+        position: absolute
+        border-bottom: 250px solid #30235f
+        border-left: 95px solid transparent
+        clip-path: polygon(100% 0%, 35% 75%, 100% 100%)
+    &:after
+        content: ''
+        position: absolute
+        border-bottom: 250px solid #46a3cc
+        border-right: 95px solid transparent
+        clip-path: polygon(0% 0%, 65% 75%, 0% 100%)
+        right: -10px
+
+.about
+    margin: 0 auto
+    width: 880px
+    height: 404px
+    display: flex
+    // flex-direction: column
+    align-items: center
+    justify-content: space-between
