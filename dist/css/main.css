@@ -258,7 +258,8 @@ a {
 
 .about {
   margin: 0 auto;
-  width: 880px;
+  max-width: 940px;
+  width: 100%;
   height: 404px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -290,7 +291,8 @@ a {
     .about__story--text {
       color: #413d4b;
       font-family: 'Roboto', sans-serif;
-      font-weight: 300; }
+      font-weight: 300;
+      line-height: 150%; }
 
 .video {
   background-image: url(../img/video_bcg.jpg); }
@@ -546,7 +548,12 @@ a {
           -ms-flex-pack: justify;
               justify-content: space-between; }
       .works__begin--ref p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 14px;
         padding-right: 10px; }
+      .works__begin--ref img {
+        cursor: pointer; }
   .works__img {
     display: -webkit-box;
     display: -webkit-flex;
