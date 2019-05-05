@@ -12,6 +12,11 @@
     font-family: 'Playfair Display', serif
 
 
+=column
+    display: flex
+    flex-direction: column
+    align-items: center
+
 $main-color: #00e0d0
 $font-main: #2f2d35
 $font-second: #413d4b
@@ -21,7 +26,6 @@ $font-white: #ffffff
 *
     margin: 0px
     padding: 0px
-    box-sizing: border-box
     scroll-behavior: smooth
     outline: none
 
@@ -39,6 +43,8 @@ a
     padding: 0
     margin: 0
 
+.bcg
+    background: linear-gradient(270deg, rgba(49,29,94,0.85) 0%, rgba(9,5,47,0.85) 100%)
 
 
 .btn
@@ -68,87 +74,24 @@ a
     font-size: 22px
 
 .bcg
-    background: linear-gradient(270deg, rgba(49,29,94,0.85) 0%, rgba(9,5,47,0.85) 100%)
-    height: 100%
+    position: relative
 
-
-.header
-    margin: 0 auto
-    height: 670px
+.section
     background-image: url(../img/header_bcg.jpg)
     &__bcg
+        min-height: 670px
+.header
+    margin: 0 auto
+    max-width: 940px
+    display: flex
+    justify-content: space-between
+    &__navigation
+        margin: 0 auto
+        max-width: 940px
+        width: 90%
+        padding-top: 35px
         display: flex
-        flex-direction: column
-        align-items: center
-        height: 670px
-        &--navigation
-            max-width: 940px
-            width: 90%
-            padding-top: 35px
-            display: flex
-            justify-content: space-between
-        &--title
-            padding-top: 120px
-            +Playfair
-            font-weight: 700
-            font-size: 32px
-            color: $font-white
-        &--text
-            padding: 28px 0 48px 0
-            text-align: center
-            +Roboto
-            font-weight: 300
-            color: $font-white
-            font-size: 14px
-            line-height: 160%
-            letter-spacing: 1px
-        &--separator
-            padding-top: 9px
-            width: 50px
-            border-bottom: 1px solid $main-color
-        &--dot-nav
-            display: flex
-            justify-content: space-between
-            padding-top: 125px
-            & .option-input
-                appearance: none
-                height: 10px
-                width: 10px
-                transition: all 0.15s ease-out 0s
-                background: #cbd1d8
-                border: none
-                color: #fff
-                cursor: pointer
-                display: inline-block
-                margin-right: 0.5rem
-                outline: none
-                position: relative
-                z-index: 1000
-                &:hover
-                    background: #9faab7
-                &:checked
-                    background: #40e0d0
-                    &::before
-                        height: 10px
-                        width: 10px
-                        position: absolute
-                        content: ''
-                        display: inline-block
-                        text-align: center
-                    &::after
-                        animation: click-wave 0.65s
-                        background: #40e0d0
-                        content: ''
-                        display: block
-                        position: relative
-                        z-index: 100
-                &.radio
-                    border-radius: 50%
-                    &::after
-                        border-radius: 50%
-            & label
-                display: block
-
+        justify-content: space-between
     .nav
         &__ul
             width: 525px
@@ -163,6 +106,79 @@ a
                     transition:	0.2s ease-in-out
                     &:hover
                         color: $main-color
+.title_header
+    text-align: center
+    padding-top: 100px
+    +Playfair
+    font-weight: 700
+    font-size: 32px
+    color: $font-white
+    &::after
+        position: absolute
+        width: 50px
+        height: 2px
+        background: $main-color
+        content: ''
+        left: 48.5%
+        margin-top: 60px
+.text
+    padding: 38px 0 48px 0
+    text-align: center
+    +Roboto
+    font-weight: 300
+    color: $font-white
+    font-size: 14px
+    line-height: 160%
+    letter-spacing: 1px
+.button
+    margin: 0 auto
+    width: 124px
+.dot-nav
+    display: flex
+    justify-content: space-between
+    padding-top: 125px
+    margin: 0 auto
+    width: 60px
+    padding-bottom: 74px
+    & .option-input
+        appearance: none
+        height: 10px
+        width: 10px
+        transition: all 0.15s ease-out 0s
+        background: #cbd1d8
+        border: none
+        color: #fff
+        cursor: pointer
+        display: inline-block
+        margin-right: 0.5rem
+        outline: none
+        position: relative
+        z-index: 1000
+        &:hover
+            background: #9faab7
+        &:checked
+            background: #40e0d0
+            &::before
+                height: 10px
+                width: 10px
+                position: absolute
+                content: ''
+                display: inline-block
+                text-align: center
+            &::after
+                animation: click-wave 0.65s
+                background: #40e0d0
+                content: ''
+                display: block
+                position: relative
+                z-index: 100
+        &.radio
+            border-radius: 50%
+            &::after
+                border-radius: 50%
+    & label
+        display: block
+
 .logo
     display: flex
     justify-content: space-between
@@ -221,12 +237,17 @@ a
     margin: 0 auto
     max-width: 940px
     width: 100%
-    height: 404px
+    min-height: 404px
+    height: 100%
     display: flex
     align-items: center
     justify-content: space-between
+    &__logo
+        margin-right: 50px
     &__story
-        height: 265px
+        min-height: 265px
+        height: 100%
+        max-width: 550px
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -238,7 +259,9 @@ a
 
 .video
     background-image: url(../img/video_bcg.jpg)
+    height: 100%
     &__bcg
+        position: relative
         height: 550px
         display: flex
         flex-direction: column
@@ -257,7 +280,7 @@ a
             color: $font-white
 
 .expertise, .team
-    height: 755px
+    height: 100%
     &__descr
         height: 75px
         padding-top: 70px
@@ -301,15 +324,16 @@ a
                 color: $font-second
 
 .our-team
-    height: 715px
+    min-height: 715px
     background-image: url(../img/team_bcg.jpg)
     .team
+        position: relative
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
         justify-content: space-between
-        height: 715px
+        min-height: 715px
         &__descr
             &--title, &--text, &--separator
                 color: $font-white
@@ -320,12 +344,16 @@ a
                 max-width: 940px
                 width: 96%
                 .human
+                    max-width: 232px
+                    width: 100%
+                    margin: 10px
                     &__img
-                        height: 230px
-                        width: 220px
+                        max-height: 230px
+                        height: 100%
+                        max-width: 220px
                         background-color: $font-white
                     &__about
-                        width: 218px
+                        max-width: 218px
                         height: 79px
                         display: flex
                         flex-direction: column
@@ -394,12 +422,13 @@ a
             background: #8a8a8a
 
 .testimonials
-    height: 500px
+    min-height: 500px
     background-image: url(../img/testimonials_bcg.jpg)
     &__bcg
         display: flex
         align-items: center
         flex-direction: column
+        min-height: 500px
         &--title
             padding-top: 30px
             +Playfair
@@ -427,7 +456,8 @@ a
             font-weight: 300
             font-size: 13px
         &__carusel
-            width: 390px
+            max-width: 390px
+            width: 90vw
             display: flex
             align-items: center
             justify-content: space-between
@@ -436,7 +466,7 @@ a
 
 .contact
     margin: 0 auto
-    height: 650px
+    min-height: 650px
     max-width: 940px
     width: 90%
     display: flex
@@ -444,9 +474,11 @@ a
     .form
         max-width: 460px
         width: 90%
+        padding-right: 20px
         &__title
             padding: 75px 0 40px 0
         &__reg
+            padding-right: 20px
             &--name, &--mail, &--subject, &--area
                 max-width: 440px
                 width: 100%
@@ -466,9 +498,10 @@ a
                 height: 180px
                 padding-top: 20px
     .clients
+        max-width: 380px
+        padding-bottom: 5%
         &__title
             padding: 75px 0 40px 0
-        width: 380px
         &__logo
             padding-top: 10px
             height: 415px
@@ -476,18 +509,22 @@ a
             justify-content: space-between
             &--left, &--right
                 margin-right: 20px
-                display: flex
-                flex-direction: column
+                +column
                 justify-content: space-between
-                align-items: center
             &--right
                 margin-right: 0
 
 .footer
-    height: 400px
+    min-height: 400px
+    height: 100%
     background-image: url(../img/footer_bcg.jpg)
     margin-bottom: 100px
-    .bcg
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .background
+        width: 100%
+        min-height: 400px
         display: flex
         flex-direction: column
         justify-content: center
@@ -596,15 +633,56 @@ a
                     display: flex
                     justify-content: flex-end
 
-@media(max-width: 820px)
+@media(max-width: 720px)
+    #top
+        display: none
+    .title
+        font-size: 18px
     .wrapper
-        width: 940px
+        width: 100%
+    .dot-nav
+        padding-top: 15%
+        padding-bottom: 0
+    .expertise
+        &__services
+            +column
     .works
         &__begin
             max-width: 70%
+            +column
+        &__img
+            &--1, &--2, &--3
+                width: 70px
+                height: 70px
     .contact
+        +column
         .form
             &__reg
-                padding-right: 60px
+                padding-right: 0
+    
+    .testimonials
+        &__bcg
+            &--title
+                font-size: 70px
+                padding-top: 0
+            &--text
+                font-size: 13px
+                padding: 0 5%
+    
     .footer
         margin-bottom: 0
+        .background
+            +column
+            padding: 7% 0
+            .container
+                +column
+                &__end
+                    +column
+                    &--copyright
+                        display: flex
+                        justify-content: center
+                        padding-top: 2%
+    
+    .section, .video, .our-team, .testimonials
+        &:before
+            width: 100%

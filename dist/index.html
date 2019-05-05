@@ -11,46 +11,49 @@
 
 <body>
     <div id="home" class="wrapper">
-        <!--Header START-->
-        <header class="header">
-            <div class="header__bcg bcg">
-                <div class="header__bcg--navigation">
-                    <div class="logo">
-                        <img src="img/logo.png" alt="logo">
-                        <p class="logo__title">tajam</p>
+        <div class="section">
+            <div class="section__bcg bcg">
+                <!--Header START-->
+                <header class="header">
+                    <div class="header__navigation">
+                        <div class="logo">
+                            <img src="img/logo.png" alt="logo">
+                            <p class="logo__title">tajam</p>
+                        </div>
+                        <nav class="nav">
+                            <ul class="nav__ul">
+                                <li class="nav__ul--li"><a href="#home">HOME</a></li>
+                                <li class="nav__ul--li"><a href="#about">ABOUT</a></li>
+                                <li class="nav__ul--li"><a href="#expertise">EXPERTISE</a></li>
+                                <li class="nav__ul--li"><a href="#teams">TEAMS</a></li>
+                                <li class="nav__ul--li"><a href="#works">WORKS</a></li>
+                                <li class="nav__ul--li"><a href="#people-say">PEOPLE SAY</a></li>
+                                <li class="nav__ul--li"><a href="#contact">CONTACT</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <nav class="nav">
-                        <ul class="nav__ul">
-                            <li class="nav__ul--li"><a href="#home">HOME</a></li>
-                            <li class="nav__ul--li"><a href="#about">ABOUT</a></li>
-                            <li class="nav__ul--li"><a href="#expertise">EXPERTISE</a></li>
-                            <li class="nav__ul--li"><a href="#teams">TEAMS</a></li>
-                            <li class="nav__ul--li"><a href="#works">WORKS</a></li>
-                            <li class="nav__ul--li"><a href="#people-say">PEOPLE SAY</a></li>
-                            <li class="nav__ul--li"><a href="#contact">CONTACT</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <h1 class="header__bcg--title">We Are Awesome Creative Agency</h1>
-                <div class="header__bcg--separator"></div>
-                <p class="header__bcg--text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                </header>
+                <!--Header END-->
+                <h1 class="title_header">We Are Awesome Creative Agency</h1>
+                <p class="text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
                     auctor aliquet. Aenean sollicitudin, lorem<br>
                     quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
                     amet nibh<br>
                     vulputate cursus asit amet mauris. Morbi accumsan ipsum velit.
                 </p>
-                <button class="btn">LEARN MORE</button>
-                <div class="header__bcg--dot-nav">
+                <div class="button">
+                    <button class="btn">LEARN MORE</button>
+                </div>
+                <div class="dot-nav">
                     <label><input type="radio" class="option-input radio" name="button" checked /></label>
                     <label><input type="radio" class="option-input radio" name="button" /></label>
                     <label><input type="radio" class="option-input radio" name="button" /></label>
                     <label><input type="radio" class="option-input radio" name="button" /></label>
                 </div>
             </div>
-        </header>
-        <!--Header END-->
+        </div>
         <!--About START-->
-        <section id="about" class="about">
+        <div id="about" class="about">
             <div class="about__logo">
                 <div id="top">
                     <div id="badge-ribbon"></div>
@@ -59,22 +62,16 @@
             </div>
             <div class="about__story">
                 <p class="title">OUR STORY</p>
-                <p class="about__story--text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                    auctor<br>
-                    aliquet Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,<br>
-                    nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
+                <p class="about__story--text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
                 </p>
-                <p class="about__story--text">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
-                    ornare odio.<br>
-                    Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu<br>
-                    ad litora torquent per conubia nostra, per inceptos himenaeos.
+                <p class="about__story--text">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                 </p>
                 <button class="btn">LEARN MORE</button>
             </div>
-        </section>
+        </div>
         <!--About END-->
         <!--Video START-->
-        <section class="video">
+        <div class="video">
             <div class="video__bcg bcg">
                 <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height='100px' width='100px' x="0px" y="0px" viewBox="0 0 420 420" style="enable-background:new 0 0 420 420;" xml:space="preserve">
                     <g>
@@ -84,14 +81,14 @@
                </svg>
                 <p class="video__bcg--title">WATCH OUR STORY</p>
             </div>
-        </section>
+        </div>
         <!--Video END-->
         <!--Expertise START-->
-        <section id="expertise" class="expertise">
+        <div id="expertise" class="expertise">
             <div class="expertise__descr">
                 <p class="title">EXPERTISE</p>
                 <p class="expertise__descr--text">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
-                <div class="expertise__descr--separator"></div>
+                <hr class="expertise__descr--separator">
             </div>
             <div class="expertise__services">
                 <div class="service">
@@ -155,15 +152,15 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
         <!--Expertise END-->
         <!--Team START-->
-        <section id="teams" class="our-team">
+        <div id="teams" class="our-team">
             <div class="team bcg">
                 <div class="team__descr">
                     <p class="team__descr--title title">MEET OUR AMAZING TEAM</p>
                     <p class="team__descr--text">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
-                    <div class="team__descr--separator"></div>
+                    <hr class="team__descr--separator">
                 </div>
                 <div class="team__descr--people">
                     <div class="human">
@@ -200,10 +197,10 @@
                     <button class="btn">WE ARE HIRING</button>
                 </div>
             </div>
-        </section>
+        </div>
         <!--TEAN END-->
         <!--Our-Works START-->
-        <section id="works" class="works">
+        <div id="works" class="works">
             <div class="works__begin">
                 <p class="works__begin--title title">OUR WORKS</p>
                 <div class="works__begin--ref">
@@ -228,10 +225,10 @@
                 <div class="works__img--1"></div>
             </div>
             <button class="btn">LOAD MORE</button>
-        </section>
+        </div>
         <!--Our Works END-->
         <!--Testimonials START-->
-        <section id="people-say" class="testimonials">
+        <div id="people-say" class="testimonials">
             <div class="testimonials__bcg bcg">
                 <p class="testimonials__bcg--title">&ldquo;</p>
                 <p class="testimonials__bcg--text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean<br>
@@ -257,10 +254,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <!--Testimonials END-->
         <!--Contact START-->
-        <section id="contact" class="contact">
+        <div id="contact" class="contact">
             <div class="form">
                 <p class="form__title title">GIVE US A GOOD NEWS</p>
                 <form class="form__reg" action="#">
@@ -310,11 +307,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <!--Contact END-->
         <!--Footer START-->
-        <section class="footer">
-            <footer class="bcg">
+        <div class="footer">
+            <footer class="background bcg">
                 <div class="container">
                     <div class="container__brand">
                         <div class="container__brand--logo">
@@ -323,10 +320,7 @@
                                 <p class="logo__title">tajam</p>
                             </div>
                         </div>
-                        <p class="container__brand--text">lorem quis bibendum auctor, nisi elit<br>
-                            consequat ipsum, nec sagittis sem nibh elit.<br>
-                            Duis sed odio sit amet auctror a ornare odio<br>
-                            non mauris vitae erat in elit
+                        <p class="container__brand--text">lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit
                         </p>
                     </div>
                     <div class="container__location">
@@ -394,7 +388,7 @@
                     <p class="container__end--copyright">Copyright © 2015 - Tajem Creative</p>
                 </div>
             </footer>
-        </section>
+        </div>
         <!--Footer END-->
     </div>
 </body>
