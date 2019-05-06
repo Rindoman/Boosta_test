@@ -99,11 +99,23 @@ a
             justify-content: space-between
             &--li
                 list-style: none
+                position: relative
                 & a
                     +Roboto
                     font-size: 13px
                     font-weight: 900
                     transition:	0.2s ease-in-out
+                    &:after
+                        position: absolute
+                        top: 24px
+                        left: 0
+                        content: ' '
+                        width: 0
+                        height: 4px
+                        background: $main-color
+                        transition: width .3s linear
+                    &:hover:after
+                        width: 100%                    
                     &:hover
                         color: $main-color
 .title_header
@@ -113,14 +125,13 @@ a
     font-weight: 700
     font-size: 32px
     color: $font-white
-    &::after
-        position: absolute
+.separator
         width: 50px
         height: 2px
         background: $main-color
-        content: ''
-        left: 48.5%
-        margin-top: 60px
+        margin: 0 auto
+        border: none
+        margin-top: 40px
 .text
     padding: 38px 0 48px 0
     text-align: center
@@ -136,7 +147,7 @@ a
 .dot-nav
     display: flex
     justify-content: space-between
-    padding-top: 125px
+    padding-top: 5%
     margin: 0 auto
     width: 60px
     padding-bottom: 74px
@@ -413,8 +424,9 @@ a
         justify-content: center
         padding-bottom: 70px
         &--1, &--2, &--3
-            width: 266px
+            width: 262px
             height: 200px
+            border: solid 1px #000000
             background: #b6b6b6
         &--2
             background: #acacac
@@ -634,15 +646,27 @@ a
                     justify-content: flex-end
 
 @media(max-width: 720px)
-    #top
+    .nav 
         display: none
     .title
         font-size: 18px
+    .title_header
+        padding-top: 50px
     .wrapper
         width: 100%
     .dot-nav
-        padding-top: 15%
+        padding-top: 10%
         padding-bottom: 0
+    .about
+        &__logo
+            display: none
+        &__story--text
+            padding: 2% 0
+    .section__bcg, .about__story, .expertise__descr--text
+        padding: 0 3%
+    .team__descr--people
+        flex-direction: row
+        flex-wrap: wrap
     .expertise
         &__services
             +column
@@ -654,6 +678,19 @@ a
             &--1, &--2, &--3
                 width: 70px
                 height: 70px
+    .our-team
+        .team__descr
+            padding-top: 3%
+            &--people
+                max-height: 460px
+                height: 100%
+                .human
+                    max-width: 155px
+                    min-height: 210px
+                    &__img
+                        max-height: 150px
+                    &__about
+                        max-height: 60px
     .contact
         +column
         .form
